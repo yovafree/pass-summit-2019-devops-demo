@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Countries } from 'src/app/core/models/countries';
+import { CountriesService } from 'src/app/core/services/countries.service';
 
 @Component({
   selector: 'app-countries',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./countries.component.scss']
 })
 export class CountriesComponent implements OnInit {
-
-  constructor() { }
+  public items: Countries[];
+  constructor(public service:CountriesService) { }
 
   ngOnInit() {
+    this.service.getAll().subscribe(
+      items =>{
+        this.items = items;
+      }
+    );
   }
 
 }

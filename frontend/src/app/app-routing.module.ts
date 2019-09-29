@@ -4,6 +4,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { RegionsComponent } from './pages/regions/regions.component';
 import { CountriesComponent } from './pages/countries/countries.component';
 import { LocationsComponent } from './pages/locations/locations.component';
+import { DepartmentsComponent } from './pages/departments/departments.component';
+import { DependentsComponent } from './pages/dependents/dependents.component';
+import { JobsComponent } from './pages/jobs/jobs.component';
+import { EmployeesComponent } from './pages/employees/employees.component';
 
 
 const routes: Routes = [
@@ -23,6 +27,22 @@ const routes: Routes = [
   {
     path: 'locations',
     component: LocationsComponent
+  },
+  {
+    path: 'departments',
+    component: DepartmentsComponent
+  },
+  {
+    path: 'dependents',
+    component: DependentsComponent,
+  },
+  {
+    path: 'jobs',
+    component: JobsComponent,
+  },
+  {
+    path: 'employees',
+    component: EmployeesComponent,
   },
 ];
 

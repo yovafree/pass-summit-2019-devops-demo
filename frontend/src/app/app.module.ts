@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppConfigModule } from './app-config.module';
 import { CountriesComponent } from './pages/countries/countries.component';
 import { LocationsComponent } from './pages/locations/locations.component';
+import { DepartmentsComponent } from './pages/departments/departments.component';
+import { DependentsComponent } from './pages/dependents/dependents.component';
+import { JobsComponent } from './pages/jobs/jobs.component';
+import { EmployeesComponent } from './pages/employees/employees.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { LocationsComponent } from './pages/locations/locations.component';
     RegionsComponent,
     CountriesComponent,
     LocationsComponent,
+    DepartmentsComponent,
+    DependentsComponent,
+    JobsComponent,
+    EmployeesComponent,
   ],
   imports: [
     BrowserModule,
