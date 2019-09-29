@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Dependents } from 'src/app/core/models/dependents';
+import { DependentsService } from 'src/app/core/services/dependents.service';
 
 @Component({
   selector: 'app-dependents',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dependents.component.scss']
 })
 export class DependentsComponent implements OnInit {
-
-  constructor() { }
+  public items: Dependents[];
+  constructor(public service:DependentsService) { }
 
   ngOnInit() {
+    this.service.getAll().subscribe(
+      items =>{
+        this.items = items;
+      }
+    );
   }
 
 }
