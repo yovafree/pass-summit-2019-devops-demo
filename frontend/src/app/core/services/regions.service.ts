@@ -14,20 +14,4 @@ export class RegionsService {
   public getAll(): Observable<any>{
     return this.httpClient.get<any>(`${this.config.apiEndpoint}/regions/`);
   }
-
-  public get(id: number): Observable<Regions>{
-    return this.httpClient.get<Regions>(`${this.config.apiEndpoint}/regions/${id}`);
-  }
-
-  save(id:number, item: Regions): Observable<Regions> {
-    return this.httpClient.post<Regions>(`${this.config.apiEndpoint}/regions/${id}` ,item);
-  }
-  
-  delete(id: number): Observable<any> {
-    return this.httpClient.delete(`${this.config.apiEndpoint}/regions/${id}`);
-  }
-  
-  update(id:number, item: Regions): Observable<Regions> {
-    return this.httpClient.put<Regions>(`${this.config.apiEndpoint}/regions/${id}`,item);
-  }
 }

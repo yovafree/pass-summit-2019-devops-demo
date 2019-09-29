@@ -8,6 +8,7 @@ import { DepartmentsComponent } from './pages/departments/departments.component'
 import { DependentsComponent } from './pages/dependents/dependents.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
+import { EmployeeFormComponent } from './pages/employee-form/employee-form.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,8 @@ const routes: Routes = [
     path: 'employees',
     component: EmployeesComponent,
   },
+  { path: 'employee/new', component: EmployeeFormComponent },
+  { path: 'employee/:id', component: EmployeeFormComponent },
 ];
 
 @NgModule({

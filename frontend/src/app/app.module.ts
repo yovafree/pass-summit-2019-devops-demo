@@ -15,6 +15,14 @@ import { DepartmentsComponent } from './pages/departments/departments.component'
 import { DependentsComponent } from './pages/dependents/dependents.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
+import { DataTablesModule } from 'angular-datatables';
+import * as $ from 'jquery';
+import 'datatables.net';
+import 'datatables.net-bs4';
+import { EmployeeFormComponent } from './pages/employee-form/employee-form.component';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,12 +37,17 @@ import { EmployeesComponent } from './pages/employees/employees.component';
     DependentsComponent,
     JobsComponent,
     EmployeesComponent,
+    EmployeeFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AppConfigModule
+    AppConfigModule,
+    DataTablesModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
