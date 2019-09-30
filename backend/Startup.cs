@@ -19,6 +19,7 @@ namespace backend
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -50,6 +51,12 @@ namespace backend
             .AllowAnyOrigin() 
             .AllowAnyHeader() 
             .AllowAnyMethod()); 
+
+            var configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json")
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json")
+            .AddEnvironmentVariables()
+            .Build();
 
 
             //app.UseAuthorization();
