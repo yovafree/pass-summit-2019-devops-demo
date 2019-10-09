@@ -19,6 +19,7 @@ services:
         hostname: demo-back
         ports:
             - "5000:80"
+            - "44349:443"
         networks:
             - overlay
         extra_hosts:
