@@ -1,7 +1,11 @@
 version: "3.4"
 services:
     frontend:
-        build: ./frontend
+        build: 
+            context: ./frontend
+            args:
+                - API_URL=52.160.67.118
+                #- API_URL=localhost
         #image: demo-front-app:latest
         container_name: demo-front
         hostname: demo-front
