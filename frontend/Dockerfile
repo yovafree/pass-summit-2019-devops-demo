@@ -1,8 +1,9 @@
 FROM node:alpine AS builder
 COPY . ./frontend
 WORKDIR /frontend
-ARG API_URL
-ENV SERVER=$API_URL
+#ARG API_URL
+#ENV SERVER=$API_URL
+ENV SERVER=52.160.67.118
 RUN npm i
 RUN $(npm bin)/ng build --prod --build-optimizer=false --aot=false
 
